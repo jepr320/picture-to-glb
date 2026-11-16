@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "picture-to-glb"
+version = "0.1.0"
+description = "Paint a concept picture onto a raw image-to-3D mesh and get a textured, game-ready GLB."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pillow>=10",
+    "trimesh>=4",
+    "xatlas>=0.0.9",
+    "fast-simplification>=0.1.7",
+]
+
+[project.scripts]
+picture-to-glb = "picture_to_glb.cli:main"
+
+[tool.setuptools]
+packages = ["picture_to_glb"]
